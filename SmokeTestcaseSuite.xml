@@ -1,0 +1,25 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name ="RegressionSuite" >
+	<test name="Login Module" >
+	<groups>
+	<run>
+	<include name = "Regression"> </include>
+	</run>
+	</groups>
+		<classes>
+		<class name="TestNG.TestNG_DataProvider" />
+		</classes>
+	</test>
+	<test name="Cart Module" >
+	<groups>
+	<run>
+	<include name = "Regression"> </include>
+	</run>
+	</groups>
+		<classes>
+		<class name ="TestNG.TestNG_CartPage" />
+		<class name ="TestNG.TestNG_PricePageTest" />
+		</classes>
+	</test>
+</suite>

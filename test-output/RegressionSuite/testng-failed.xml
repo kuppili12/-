@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [RegressionSuite]">
+  <test name="Login Module">
+    <groups>
+      <run>
+        <include name="smoke"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="TestNG.TestNG_DataProvider"/>
+    </classes>
+  </test> <!-- Login Module -->
+  <test name="Cart Module">
+    <groups>
+      <run>
+        <include name="smoke"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="TestNG.TestNG_CartPage"/>
+      <class name="TestNG.TestNG_PricePageTest"/>
+    </classes>
+  </test> <!-- Cart Module -->
+  <test name="Login Module(failed)">
+    <groups>
+      <run>
+        <include name="smoke"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="TestNG.TestNG_CartPage">
+        <methods>
+          <include name="CloseBrowser"/>
+          <include name="testSetup"/>
+        </methods>
+      </class> <!-- TestNG.TestNG_CartPage -->
+      <class name="TestNG.TestNG_DataProvider">
+        <methods>
+          <include name="testPageTitle"/>
+        </methods>
+      </class> <!-- TestNG.TestNG_DataProvider -->
+      <class name="TestNG.TestNG_PricePageTest">
+        <methods>
+          <include name="CloseBrowser"/>
+          <include name="testSetup"/>
+        </methods>
+      </class> <!-- TestNG.TestNG_PricePageTest -->
+    </classes>
+  </test> <!-- Login Module(failed) -->
+  <test name="Cart Module(failed)">
+    <groups>
+      <run>
+        <include name="smoke"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="TestNG.TestNG_CartPage">
+        <methods>
+          <include name="CloseBrowser"/>
+          <include name="testSetup"/>
+        </methods>
+      </class> <!-- TestNG.TestNG_CartPage -->
+      <class name="TestNG.TestNG_PricePageTest">
+        <methods>
+          <include name="CloseBrowser"/>
+          <include name="testPageTitle"/>
+          <include name="testSetup"/>
+        </methods>
+      </class> <!-- TestNG.TestNG_PricePageTest -->
+    </classes>
+  </test> <!-- Cart Module(failed) -->
+</suite> <!-- Failed suite [RegressionSuite] -->
